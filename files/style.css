@@ -79,6 +79,12 @@ a{
 	font-size:42px;
 }
 
+.btn-dark {
+    color: #fff;
+    background-color: #000 !important;
+    border-color: #000 !important;
+}
+
 /*media queries*/
 
 /*@media (min-width: 768px) {
