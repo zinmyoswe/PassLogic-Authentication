@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="files/common.css" type="text/css">
 <link rel="stylesheet" media="screen and (min-width: 641px)" href="files/pc.css">
 <link rel="stylesheet" media="screen and (max-width: 640px) and (min-width: 0px)" href="files/sp.css">
+<link rel="stylesheet" type="text/css" href="files/style.css">
 
 <!--[if IE9 ]>
 <link rel="stylesheet" media="screen,print" href="files/ie9.css?ent-2.0.0" type="text/css">
@@ -18,6 +19,13 @@
 <script src="files/jquery.js" type="text/javascript"></script>
 <script src="files/base.js" type="text/javascript"></script>
 <script src="files/passlogy_demo.js" type="text/javascript"></script>
+
+
+<!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Abel|Lato|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -28,10 +36,8 @@
 
 <div id="contents">
 
-<div style="background-color:#CCC;padding:1em;">
-	The demonstration pattern is shown below by the V-shaped sequence that begins at 1 and ends at 8.
-	The password is comprised of the sequence of numbers in the number table that correspond to this pattern.
-	Please extract these numbers from the number table and enter them into the password field.<br><br>
+<div style="background-color:#f8f9fa; padding:1em; font-size: 1rem;">
+	
 	1 * * * 　 * * * 8 　 * * * *<br>
 	* 2 * * 　 * * 7 * 　 * * * *<br>
 	* * 3 * 　 * 6 * * 　 * * * *<br>
@@ -112,7 +118,7 @@
 	</tr>
 	<tr>
 	<td><div class="randamNumberBoxRadius"><p id="40">40</p></div></td>
-	<td><div class="randamNumberBoxterRadius"><p id="41">41</p></div></td>
+	<td><div class="randamNumberBoxRadius"><p id="41">41</p></div></td>
 	<td><div class="randamNumberBoxRadius"><p id="42">42</p></div></td>
 	<td><div class="randamNumberBoxRadius"><p id="43">43</p></div></td>
 	</tr>
@@ -126,7 +132,7 @@
 </td>
 </tr>
 <tr>
-<td colspan="3"><div class="secured">Developed By <a href="https://github.com/zinmyoswe">ZINMYOSWE</a></div></td>
+<td colspan="3"><div class="secured">Developed By <a href="https://github.com/zinmyoswe"><i class="fab fa-github"></i> ZINMYOSWE</a></div></td>
 </tr>
 </table>
 
@@ -135,8 +141,8 @@
 	<p class="passwordText">Enter your password.</p>
 	<div id="info" style="color:red;"></div>
 	<div id="formBox" class="clearfix">
-		<div class="formBoxFloat"><input type="text" class="passlogic_css_password" name="password" id="password" value="" autocomplete="off" onkeydown="if(event.keyCode == 13){login();}"></div>
-		<div class="formBoxFloat"><button type="submit" class="passlogic_css_submit" onkeydown="if(event.keyCode == 13){login();}" onclick="login();">Login</button></div>
+		<div class="formBoxFloat"><input type="text" class="form-control" name="password" id="password" value="" autocomplete="off" onkeydown="if(event.keyCode == 13){login();}"></div>
+		<div class="formBoxFloat"><button type="submit" class="btn btn-primary" onkeydown="if(event.keyCode == 13){login();}" onclick="login();" style="margin-left: 0.3rem;">Login</button></div>
 	</div>
 </div>
 

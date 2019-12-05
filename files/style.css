@@ -1,0 +1,14 @@
+html, body{
+	background-color: white !important;
+	font-family: 'Lato', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Abel', sans-serif;
+}
+
+.randamNumberBoxRadius{
+	height: 3.2rem;
+}
+
+a{
+	color: #000 !important;
+}
