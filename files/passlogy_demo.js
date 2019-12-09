@@ -10,6 +10,7 @@ $(document).ready(function(){
 var j = 0;
 function login(){
 var 
+	// var sasa = document.getElementById("id").value;
 	passwd = $("p#0").html();
 	passwd += $("p#5").html();
 	passwd += $("p#10").html();
@@ -20,7 +21,7 @@ var
 	passwd += $("p#32").html();
 	var inpasswd = $(":text").val();
 	if(passwd==inpasswd){
-		location.href="menu.html";
+		location.href="somepage.php?w1=" + 41412 + "";
 	}else if(j==0){
 		$("#info").html("<div class='alert alert-danger' role='alert' style='margin-bottom: 0.3rem;'><i class='fas fa-exclamation'></i> The password is incorrect.</div>");
 	    j++;

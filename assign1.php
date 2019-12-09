@@ -1,3 +1,9 @@
+<?php
+
+  include('config.php');
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,27 +14,60 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Abel|Lato|Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <title>Menu</title>
+    <title>Hello, world!</title>
+    <style>
+    
+    </style>
   </head>
   <body>
-    <div class="container mt-4">
-    	<div class="row">
-    		<div class="col-lg-12">
-    			<div class="alert alert-info alert-dismissible fade show" role="alert">
-  <strong>Login Successful!</strong> Welcome.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
 
-		 <a href="" class="btn btn-primary">Change Password</a>
-		 <a href="index.html" class="btn btn-outline-primary">Logout</a>
-    		</div>
-    	</div>
+  <div class="container mt-4">
+  <div class="row">
+    <div class="col-lg-4 offset-3">
+    <?php
+$cars = array
+  (
+  array("Volvo",22,18),
+  array("BMW",15,13),
+  array("Saab",5,2),
+  array("Land Rover",17,15)
+  );
+    
+for ($row = 0; $row < 4; $row++) {
+  echo "<p><b>Row number $row</b></p>";
+  echo "<ul>";
+  for ($col = 0; $col < 3; $col++) {
+    echo "<li>".$cars[$row][$col]."</li>";
+  }
+  echo "</ul>";
+}
+?>
+
+<?php
+    include('config.php');
+    $results = array();
+    $sql = "select * from number_field";
+    
+    $run = mysqli_query($mysqli,$sql);
+    
+    
+      while($row = mysqli_fetch_assoc($run)) {
+        $results[] = $row['number'];
+      
+?>
+
+<p><?php print_r($results) ?></p>
+
+<?php echo $results[0][5].": In stock: ".$results[0][1].", sold: ".$results[0][2].".<br>"; ?>
+
+<?php echo count($results) ?>
+
+
+      <?php } ?>
     </div>
+    </div>
+  </div>
+  
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
